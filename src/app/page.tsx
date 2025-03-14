@@ -22,15 +22,15 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-6 text-center md:text-left animate-slide-up stagger-2">
             <div className="text-slate-600 dark:text-slate-300 text-base font-[400] tracking-tight space-y-2">
-              <span className="block mb-4">currently:</span>
+              <span className="block mb-4 group hover:text-slate-800 dark:hover:text-slate-100 transition-all duration-300 cursor-default rounded-sm dark:hover:bg-slate-800/50 hover:translate-y-[-2px]">currently:</span>
               <div className="space-y-3">
                 <div className="flex items-center gap-2 group">
                   <span className="text-slate-400 dark:text-slate-500 group-hover:translate-x-1 transition-transform duration-300">→</span>
-                  <span className="group-hover:translate-x-1 transition-transform duration-300">building a digital platform for Com House, a social housing non-profit in Hong Kong</span>
+                  <span className="group-hover:translate-x-1 transition-transform duration-300 group-hover:text-slate-800 dark:group-hover:text-slate-100 rounded-sm dark:group-hover:bg-slate-800/50 hover:translate-y-[-2px]">building a digital platform for <a href="https://www.facebook.com/hkcomhome/" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Com House</a>, a social housing non-profit in Hong Kong</span>
                 </div>
                 <div className="flex items-center gap-2 group">
                   <span className="text-slate-400 dark:text-slate-500 group-hover:translate-x-1 transition-transform duration-300">→</span>
-                  <span className="group-hover:translate-x-1 transition-transform duration-300">enhancing TiltQ with Marvel Rivals features, following its successful launch with 3,000+ users on day one</span>
+                  <span className="group-hover:translate-x-1 transition-transform duration-300 group-hover:text-slate-800 dark:group-hover:text-slate-100 rounded-sm dark:group-hover:bg-slate-800/50 hover:translate-y-[-2px]">enhancing TiltQ with Marvel Rivals features, following its successful launch with 3,000+ users on day one</span>
                 </div>
               </div>
             </div>
@@ -104,7 +104,16 @@ export default function Home() {
                 </h3>
                 <div className="inline-block uppercase text-xs rounded-full px-1 py-0 border border-slate-500 text-slate-500 dark:text-slate-400 dark:border-slate-400">incoming</div>
               </div>
-              <p className="mb-2 text-sm text-slate-500 dark:text-slate-400 group-hover:translate-x-1 transition-transform duration-500">Deman Esports</p>
+              <p className="mb-2 text-sm text-slate-500 dark:text-slate-400 group-hover:translate-x-1 transition-transform duration-500">
+                <a 
+                  href="https://demanesports.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >
+                  Deman Esports
+                </a>
+              </p>
               <p className="text-sm text-slate-500 dark:text-slate-400 group-hover:translate-x-1 transition-transform duration-500">Leading development of an esports platform serving 75,000+ members.</p>
             </li>
             <li className="ms-4 group">
@@ -112,7 +121,18 @@ export default function Home() {
               <h3 className="text-md font-medium text-slate-800 dark:text-slate-300 tracking-tight group-hover:translate-x-1 transition-transform duration-500">
                 Software Engineer
               </h3>
-              <p className="mb-2 text-sm text-slate-500 dark:text-slate-400 group-hover:translate-x-1 transition-transform duration-500">ITMZ (Next 36 Fall 2024 Cohort)</p>
+              <p className="mb-2 text-sm text-slate-500 dark:text-slate-400 group-hover:translate-x-1 transition-transform duration-500">
+                <a 
+                  href="https://www.itmz.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >
+                  ITMZ
+                </a>
+                {" "}
+                (Next 36 Fall 2024 Cohort)
+              </p>
               <p className="text-sm text-slate-500 dark:text-slate-400 group-hover:translate-x-1 transition-transform duration-500">Built and optimized mobile app features using Flutter and AWS services.</p>
             </li>
           </ol>

@@ -4,6 +4,7 @@ import { Layout } from "@/components/layout";
 import Link from "next/link";
 import { Github, ExternalLink, Youtube } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 // Project type
 type ProjectTag = {
@@ -18,23 +19,58 @@ type Project = {
     website?: string;
     youtube?: string;
   };
+  images?: string[];
   tags: ProjectTag[];
 };
 
 // Project data
 const projects: Project[] = [
   {
+    title: "TiltQ",
+    description: "League of Legends AI Tilt Detector created as a Riot API-powered web app with Google Gemini AI for analyzing player performance and detecting tilt patterns, gaining 3,000+ visits on launch day.",
+    links: {
+      github: "https://github.com/tmanzhe/tiltq",
+      website: "https://tiltq.com"
+    },
+    images: [
+      "/images/Tiltq Demo.gif"
+    ],
+    tags: [
+      { name: "Riot API" },
+      { name: "Gemini" },
+      { name: "Next.js" },
+    ],
+  },
+  {
     title: "MockMate",
     description: "An AI Interview Bot built at UofTHacks 12, leveraging Azure Speech, GPT-4o, Next.js, and PostgreSQL (AWS RDS) to simulate real-time interview experiences.",
     links: {
       github: "https://github.com/tmanzhe/mockmate",
     },
+    images: [
+      "/images/mockmatedemo1.png",
+      "/images/mockmatedemo2.png",
+      "/images/mockmatedemo3.png"
+    ],
     tags: [
       { name: "Next.js" },
       { name: "Azure Speech" },
-      { name: "GPT-4o" },
+      { name: "OpenAI" },
       { name: "PostgreSQL" },
       { name: "AWS RDS" },
+    ],
+  },
+  {
+    title: "Minimi",
+    description: "Summarization Chrome Extension built with Spring Boot & JavaScript that fine-tunes Gemini models to generate concise summaries for students.",
+    links: {
+      github: "https://github.com/tmanzhe/minimi",
+    },
+    tags: [
+      { name: "Spring Boot" },
+      { name: "JavaScript" },
+      { name: "Chrome Extension" },
+      { name: "Gemini API" },
     ],
   },
   {
@@ -52,34 +88,57 @@ const projects: Project[] = [
     ],
   },
   {
-    title: "TiltQ",
-    description: "League of Legends AI Tilt Detector created as a Riot API-powered web app with Google Gemini AI for analyzing player performance and detecting tilt patterns, gaining 3,000+ visits on launch day.",
+    title: "GestureFlow",
+    description: "An innovative virtual mouse control system that uses computer vision and gesture recognition to enable hands-free computer interaction, making computing more accessible and intuitive.",
     links: {
-      github: "https://github.com/tmanzhe/tiltq",
+      github: "https://github.com/tmanzhe/virtual_mouse",
     },
+    images: [
+      "/images/virtual-mouse.png",
+      "/images/clicker.png"
+    ],
     tags: [
-      { name: "Riot API" },
-      { name: "Google Gemini AI" },
-      { name: "Web App" },
+      { name: "Python" },
+      { name: "Computer Vision" },
+      { name: "Gesture Recognition" },
+      { name: "OpenCV" },
     ],
   },
   {
-    title: "Minimi",
-    description: "Summarization Chrome Extension built with Spring Boot & JavaScript that fine-tunes Gemini models to generate concise summaries for students.",
+    title: "Self-Driving Car Simulator",
+    description: "An interactive web-based simulation of autonomous vehicle behavior, featuring realistic physics, obstacle detection, and path planning algorithms.",
     links: {
-      github: "https://github.com/tmanzhe/minimi",
+      github: "https://github.com/tmanzhe/self_driving_car",
     },
+    images: [
+      "/images/drive-1.png",
+      "/images/drive-2.png"
+    ],
     tags: [
-      { name: "Spring Boot" },
       { name: "JavaScript" },
-      { name: "Chrome Extension" },
-      { name: "Gemini API" },
+      { name: "HTML5 Canvas" },
+      { name: "Physics Simulation" },
+      { name: "Path Planning" },
     ],
   },
 ];
 
 // Project card component
 function ProjectCard({ project, index }: { project: Project; index: number }) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const nextImage = () => {
+    if (project.images && currentImageIndex < project.images.length - 1) {
+      setCurrentImageIndex(currentImageIndex + 1);
+    }
+  };
+
+  const prevImage = () => {
+    if (currentImageIndex > 0) {
+      setCurrentImageIndex(currentImageIndex - 1);
+    }
+  };
+
   return (
     <div
       className="group mb-12 pb-8 border-b border-slate-200 dark:border-slate-800 animate-slide-up opacity-0"
@@ -106,58 +165,96 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             </span>
           )}
         </h3>
-        <div className="flex space-x-3">
-          {project.links.github && (
-            <a
-              href={project.links.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-colors duration-300 hover:rotate-12"
-              aria-label={`GitHub repository for ${project.title}`}
-            >
-              <Github size={18} className="hover:scale-110 transition-transform duration-300" />
-            </a>
-          )}
+        <div className="flex gap-2">
+          <Link
+            href={project.links.github || '#'}
+            target="_blank"
+            className="text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-colors duration-300 hover:rotate-12"
+            aria-label={`GitHub repository for ${project.title}`}
+          >
+            <Github size={18} className="hover:scale-110 transition-transform duration-300" />
+          </Link>
           {project.links.website && (
-            <a
+            <Link
               href={project.links.website}
               target="_blank"
-              rel="noopener noreferrer"
               className="text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-colors duration-300 hover:rotate-12"
               aria-label={`Website for ${project.title}`}
             >
               <ExternalLink size={18} className="hover:scale-110 transition-transform duration-300" />
-            </a>
-          )}
-          {project.links.youtube && (
-            <a
-              href={project.links.youtube}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-colors duration-300 hover:rotate-12"
-              aria-label={`YouTube video for ${project.title}`}
-            >
-              <Youtube size={18} className="hover:scale-110 transition-transform duration-300" />
-            </a>
+            </Link>
           )}
         </div>
       </div>
-
       <p className="text-slate-600 dark:text-slate-400 mb-6 tracking-tight group-hover:translate-x-1 transition-transform duration-700">{project.description}</p>
-
-      <div className="relative w-full aspect-video overflow-hidden rounded-lg mb-6 bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 group-hover:shadow-md transition-all duration-500 group-hover:scale-[1.02] group-hover:translate-y-[-2px] group-hover:bg-gradient-to-br group-hover:from-slate-100 group-hover:to-slate-200 dark:group-hover:from-slate-800 dark:group-hover:to-slate-700">
-        <div className="transition-all duration-500 flex flex-col items-center gap-2 group-hover:scale-110">
-          <span className="text-lg">{project.title}</span>
-          <span className="text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">Demo Preview</span>
+      
+      {project.images && project.images.length > 0 && (
+        <div className="relative aspect-video rounded-lg overflow-hidden mb-6 group-hover:shadow-md transition-all duration-500 group-hover:scale-[1.02] group-hover:translate-y-[-2px] group-hover:bg-gradient-to-br group-hover:from-slate-100 group-hover:to-slate-200 dark:group-hover:from-slate-800 dark:group-hover:to-slate-700">
+          {project.images.length === 1 && project.images[0].endsWith('.gif') ? (
+            <Image
+              src={project.images[0]}
+              alt={`${project.title} demo`}
+              fill
+              className="object-cover"
+            />
+          ) : (
+            <>
+              <div 
+                className="absolute inset-0 flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
+              >
+                {project.images.map((image, idx) => (
+                  <div key={idx} className="min-w-full relative">
+                    <Image
+                      src={image}
+                      alt={`${project.title} demo ${idx + 1}`}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1">
+                {project.images.map((_, idx) => (
+                  <button
+                    key={idx}
+                    className={`w-2 h-2 rounded-full transition-colors duration-300 ${
+                      idx === currentImageIndex ? 'bg-white' : 'bg-white/50 hover:bg-white/75'
+                    }`}
+                    onClick={() => setCurrentImageIndex(idx)}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
+              <div className="absolute inset-0 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button
+                  onClick={prevImage}
+                  className="p-2 bg-black/20 hover:bg-black/40 text-white rounded-r-lg transition-colors duration-300"
+                  disabled={currentImageIndex === 0}
+                  aria-label="Previous image"
+                >
+                  ←
+                </button>
+                <button
+                  onClick={nextImage}
+                  className="p-2 bg-black/20 hover:bg-black/40 text-white rounded-l-lg transition-colors duration-300"
+                  disabled={currentImageIndex === project.images.length - 1}
+                  aria-label="Next image"
+                >
+                  →
+                </button>
+              </div>
+            </>
+          )}
         </div>
-      </div>
-
+      )}
+      
       <div className="flex flex-wrap gap-2">
-        {project.tags.map((tag, tagIndex) => (
+        {project.tags.map((tag, idx) => (
           <span
-            key={tagIndex}
+            key={idx}
             className="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-2 py-1 rounded hover-scale cursor-default"
-            style={{ animationDelay: `${0.05 * (tagIndex + 1)}s` }}
+            style={{ animationDelay: `${0.05 * (idx + 1)}s` }}
           >
             {tag.name}
           </span>

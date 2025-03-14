@@ -35,6 +35,13 @@ export function Nav() {
           >
             blog
           </LinkUnderline>
+          <LinkUnderline
+            href="/gallery"
+            isActive={pathname === "/gallery"}
+            className="text-sm hover-scale"
+          >
+            gallery
+          </LinkUnderline>
         </nav>
         <div className="animate-fade-in">
           <ThemeToggle />
