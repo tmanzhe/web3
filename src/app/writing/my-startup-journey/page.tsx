@@ -17,10 +17,6 @@ export default function BlogPost() {
           <h1 className="text-3xl font-bold text-slate-800 dark:text-slate-200 mb-2 mt-4 animate-slide-up">
             From Zero to Something: My First Startup Experience at ITMZ
           </h1>
-          <div className="text-slate-500 dark:text-slate-400 mb-8 animate-slide-up opacity-0" style={{ animationDelay: '100ms' }}>
-            March 15, 2024
-          </div>
-          
           <div className="prose prose-slate dark:prose-invert max-w-none">
             <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg mb-8 animate-slide-up opacity-0" style={{ animationDelay: '200ms' }}>
               <h3 className="text-slate-800 dark:text-slate-200 text-sm font-medium mb-2">Key Takeaways</h3>
