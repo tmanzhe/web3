@@ -20,13 +20,13 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-6 text-center md:text-left animate-slide-up stagger-2">
+          <div className="flex flex-col gap-6 text-center md:text-left">
             <div className="text-slate-600 dark:text-slate-300 text-base font-[400] tracking-tight space-y-2">
-              <span className="block mb-4 group hover:text-slate-800 dark:hover:text-slate-100 transition-all duration-300 cursor-default rounded-sm dark:hover:bg-slate-800/50">currently:</span>
+              <span className="block mb-4 group hover:text-slate-800 dark:hover:text-slate-100 transition-colors duration-300 cursor-default rounded-sm dark:hover:bg-slate-800/50">currently:</span>
               <div className="space-y-3">
                 <div className="flex items-center gap-2 group">
                   <span className="text-slate-400 dark:text-slate-500 group-hover:translate-x-1 transition-transform duration-300">→</span>
-                  <span className="group-hover:translate-x-1 transition-transform duration-300 group-hover:text-slate-800 dark:group-hover:text-slate-100 rounded-sm dark:group-hover:bg-slate-800/50">building a digital platform for <a href="https://www.facebook.com/hkcomhome/" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Com House</a>, a social housing non-profit in Hong Kong</span>
+                  <span className="group-hover:translate-x-1 transition-transform duration-300 group-hover:text-slate-800 dark:group-hover:text-slate-100 rounded-sm dark:group-hover:bg-slate-800/50">building a digital platform for <a href="https://www.facebook.com/hkcomhome/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">Com House</a>, a social housing non-profit in Hong Kong</span>
                 </div>
                 <div className="flex items-center gap-2 group">
                   <span className="text-slate-400 dark:text-slate-500 group-hover:translate-x-1 transition-transform duration-300">→</span>
