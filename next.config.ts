@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  distDir: process.env.NODE_ENV === "production" ? "build" : ".next",
   images: {
     remotePatterns: [
       {
@@ -12,6 +11,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  output: 'standalone',
 };
 
 export default nextConfig;

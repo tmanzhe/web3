@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   title: "Truman Chan",
   description: "Personal website of Truman Chan - Software Engineer, Computer Science & Business Management Student",
   keywords: ["Truman Chan", "Software Engineer", "Web Developer", "Student", "Portfolio"],
+  icons: {
+    icon: "/logo.jpeg",
+    apple: "/logo.jpeg",
+  },
 };
 
 export default function RootLayout({
