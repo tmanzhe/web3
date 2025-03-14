@@ -26,7 +26,6 @@ export default function Home() {
               <div className="space-y-3">
                 <div className="flex items-center gap-2 group">
                   <span className="text-slate-400 dark:text-slate-500 group-hover:translate-x-1 transition-transform duration-300">→</span>
-                 //<span className="group-hover:translate-x-1 transition-transform duration-300 group-hover:text-slate-800 dark:group-hover:text-slate-100 rounded-sm dark:group-hover:bg-slate-800/50">building a digital platform for <a href="https://www.facebook.com/hkcomhome/" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 transition-colors">Com House</a>, a social housing non-profit in Hong Kong</span>
                   <span className="group-hover:translate-x-1 transition-transform duration-300 group-hover:text-slate-800 dark:group-hover:text-slate-100 rounded-sm dark:group-hover:bg-slate-800/50">building a club @ yorku to build tech for non profits</span>
                 </div>
                 <div className="flex items-center gap-2 group">
@@ -228,3 +227,5 @@ export default function Home() {
     </Layout>
   );
 }
+ //<span className="group-hover:translate-x-1 transition-transform duration-300 group-hover:text-slate-800 dark:group-hover:text-slate-100 rounded-sm dark:group-hover:bg-slate-800/50">building a digital platform for <a href="https://www.facebook.com/hkcomhome/" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 transition-colors">Com House</a>, a social housing non-profit in Hong Kong</span>
+
