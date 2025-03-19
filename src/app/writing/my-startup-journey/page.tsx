@@ -15,7 +15,7 @@ export default function BlogPost() {
             <span className="transform transition-transform group-hover:-translate-x-1">←</span> Back to blog
           </Link>
           <h1 className="text-3xl font-bold text-slate-800 dark:text-slate-200 mb-2 mt-4 animate-slide-up">
-            my first experience 
+            my first experience with startup
           </h1>
           <div className="prose prose-slate dark:prose-invert max-w-none">
             <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg mb-8 animate-slide-up opacity-0" style={{ animationDelay: '200ms' }}>

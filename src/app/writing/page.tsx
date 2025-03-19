@@ -8,7 +8,7 @@ type BlogPost = {
 
 const blogPosts: BlogPost[] = [
   {
-    title: "Zero to Hero: How ITMZ Changed My Career Trajectory",
+    title: "my first experience with startup",
     slug: "/writing/my-startup-journey",
   },
 ];
