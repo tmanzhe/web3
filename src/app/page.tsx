@@ -210,6 +210,8 @@ export default function Home() {
               "Node.js",
               "PostgreSQL",
               "MongoDB",
+              "FastAPI",
+              "LangChain",
               "C",
               "Assembly"
             ].map((skill, index) => (

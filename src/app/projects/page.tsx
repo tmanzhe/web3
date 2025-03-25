@@ -42,6 +42,31 @@ const projects: Project[] = [
     ],
   },
   {
+    title: "Clash of Plans",
+    description: "An AI agent that converts natural language into actionable tasks and calendar events, intelligently managing your schedule by understanding context and intent through LangChain and Cohere. Built for GenAI Genesis 2025.",
+    links: {
+      github: "https://github.com/JeffreyYeet1/cop",
+      website: "https://devpost.com/software/clash-of-plans"
+    },
+    images: [
+      "/images/copdemo1.png",
+      "/images/copdemo2.png",
+      "/images/copdemo3.png",
+      "/images/copdemo4.png",
+      "/images/copdemo5.png",
+
+    ],
+    tags: [
+      { name: "Next.js" },
+      { name: "FastAPI" },
+      { name: "Python" },
+      { name: "LangChain" },
+      { name: "Cohere" },
+      { name: "Supabase" },
+      { name: "TypeScript" },
+    ],
+  },
+  {
     title: "MockMate",
     description: "An AI Interview Bot built at UofTHacks 12, leveraging Azure Speech, GPT-4o, Next.js, and PostgreSQL (AWS RDS) to simulate real-time interview experiences.",
     links: {

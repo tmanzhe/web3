@@ -93,8 +93,8 @@ export default function BlogPost() {
 
             <p className="mb-4 animate-slide-up opacity-0" style={{ animationDelay: '1425ms' }}>
               The team at ITMZ created this unique environment where learning was celebrated. No corporate BS, no endless meetings 
-              about meetings. Just a bunch of people trying to build something cool. We'd watch others's demos, discuss  decisions, and celebrate wins (and sometimes losses) together. 
-              It was sometimes intense, but it was genuine.
+              about meetings. Just a bunch of people trying to build something cool. We'd watch others's demos, discuss decisions, 
+              and celebrate wins (and sometimes losses) together. It was sometimes intense, but it was genuine.
             </p>
 
             <p className="mb-4 animate-slide-up opacity-0" style={{ animationDelay: '1450ms' }}>
