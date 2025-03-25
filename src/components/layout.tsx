@@ -2,6 +2,7 @@
 
 import { Nav } from "./nav";
 import { Footer } from "./footer";
+import { Analytics } from "@vercel/analytics/react"
 
 const navigation = [
   { name: "Home", href: "/" },
