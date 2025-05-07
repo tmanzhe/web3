@@ -10,7 +10,7 @@ export default function Home() {
         {/* Profile section */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8 animate-fade-in">
           <div className="relative animate-slide-up">
-            <div className="h-[200px] w-[200px] rounded-full border-4 border-slate-200 dark:border-slate-700 bg-slate-300 dark:bg-slate-600 flex items-center justify-center text-slate-500 dark:text-slate-300 text-4xl font-medium hover-rotate overflow-hidden group">
+            <div className="h-[200px] w-[200px] rounded-xl border-4 border-slate-200 dark:border-slate-700 bg-slate-300 dark:bg-slate-600 flex items-center justify-center text-slate-500 dark:text-slate-300 text-4xl font-medium hover-rotate overflow-hidden group">
               <Image
                 src="/images/me.png"
                 alt="Truman Chan"
@@ -42,7 +42,7 @@ export default function Home() {
                 See my projects
               </Link>
               <a
-                href="https://drive.google.com/file/d/1khMnULxtlfqHS_2eXmESdOgcHqldoZrV/view?usp=sharing"
+                href="https://drive.google.com/file/d/1JATC2kx97Ab9c2arvBU33IpLf4B_3t3c/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm px-4 py-2 rounded-md bg-slate-200 text-slate-800 hover:bg-slate-300 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-md button-hover"
@@ -100,9 +100,8 @@ export default function Home() {
               <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-slate-200 dark:border-slate-700 bg-slate-300 dark:bg-slate-700 group-hover:bg-slate-400 dark:group-hover:bg-slate-500 transition-colors duration-300 group-hover:animate-pulse"></div>
               <div className="flex flex-row items-center gap-2">
                 <h3 className="text-md font-medium text-slate-800 dark:text-slate-300 tracking-tight group-hover:translate-x-1 transition-transform duration-500">
-                  Software Engineering Lead
+                  Lead Software Engineer
                 </h3>
-                <div className="inline-block uppercase text-xs rounded-full px-1 py-0 border border-slate-500 text-slate-500 dark:text-slate-400 dark:border-slate-400">incoming</div>
               </div>
               <p className="mb-2 text-sm text-slate-500 dark:text-slate-400 group-hover:translate-x-1 transition-transform duration-500">
                 <a 
@@ -113,8 +112,10 @@ export default function Home() {
                 >
                   Deman Esports
                 </a>
+                {" "}
+                (May 2025 - Present)
               </p>
-              <p className="text-sm text-slate-500 dark:text-slate-400 group-hover:translate-x-1 transition-transform duration-500">Leading development of an esports platform serving 75,000+ members.</p>
+              <p className="text-sm text-slate-500 dark:text-slate-400 group-hover:translate-x-1 transition-transform duration-500">Leading a team of 4 in developing an esports platform serving 75,000+ members.</p>
             </li>
             <li className="ms-4 group">
               <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-slate-200 dark:border-slate-700 bg-slate-300 dark:bg-slate-700 group-hover:bg-slate-400 dark:group-hover:bg-slate-500 transition-colors duration-300 group-hover:animate-pulse"></div>
@@ -131,7 +132,7 @@ export default function Home() {
                   ITMZ
                 </a>
                 {" "}
-                (Next 36 Fall 2024 Cohort)
+                (Next 36 Fall 2024 Cohort) (June 2024 - December 2024)
               </p>
               <p className="text-sm text-slate-500 dark:text-slate-400 group-hover:translate-x-1 transition-transform duration-500">Built and optimized mobile app features using Flutter and AWS services.</p>
             </li>
@@ -159,9 +160,9 @@ export default function Home() {
                 github: "https://github.com/tmanzhe/tiltq"
               },
               {
-                title: "Minimi",
-                description: "Summarization Chrome Extension",
-                github: "https://github.com/tmanzhe/minimi"
+                title: "Clash of Plans",
+                description: "AI Task & Calendar Manager",
+                github: "https://github.com/JeffreyYeet1/cop"
               },
             ].map((project, index) => (
               <Link

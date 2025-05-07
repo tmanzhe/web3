@@ -9,7 +9,7 @@ type BlogPost = {
 const blogPosts: BlogPost[] = [
   {
     title: "my first experience with startup",
-    slug: "/writing/my-startup-journey",
+    slug: "/writing/mystartupjourney",
   },
 ];
 

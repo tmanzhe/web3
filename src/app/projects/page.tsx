@@ -327,24 +327,6 @@ export default function ProjectsPage() {
             <ProjectCard key={index} project={project} index={index} />
           ))}
         </div>
-
-        <div className="mt-16 p-6 border border-slate-200 dark:border-slate-800 rounded-lg animate-slide-up stagger-4 opacity-0 card-hover">
-          <h2 className="text-slate-800 dark:text-slate-100 text-lg font-medium mb-3 flex items-center gap-2">
-            <span className="w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center">
-              <span className="text-blue-800 dark:text-blue-100 text-xs">+</span>
-            </span>
-            Have a project idea?
-          </h2>
-          <p className="text-slate-600 dark:text-slate-400 mb-4">
-            I'm always open to collaboration and new opportunities. If you have an idea you'd like to discuss, feel free to reach out!
-          </p>
-          <Link
-            href="mailto:example@email.com"
-            className="inline-flex text-sm px-4 py-2 rounded-md bg-slate-800 text-white hover:bg-slate-700 dark:bg-slate-700 dark:hover:bg-slate-600 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-md button-hover"
-          >
-            Contact me
-          </Link>
-        </div>
       </div>
     </Layout>
   );
